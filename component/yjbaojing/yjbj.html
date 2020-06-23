@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="../../node_modules/jquery-weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../../css/weui_biaodan.css">
+    <link rel="stylesheet" href="../../css/biaodan.css">
+    <script src="../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../../node_modules/jquery-weui/dist/js/jquery-weui.js"></script>
+    <script src="../../node_modules/jquery-weui/dist/js/city-picker.js"></script>
+    <script src="js/yjbj.js"></script>
+    <style type="text/css">
+        .orientation {
+            position: relative;
+        }
+
+        .orientation span {
+            position: absolute;
+            right: 30px;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background: url(../../img/dldw.png) no-repeat center;
+            background-size: contain;
+        }
+
+    </style>
+</head>
+
+<body>
+       <iframe style="display: none" id="geoPage" width="100%" height="0%" frameborder=0 scrolling="no"
+               src="https://apis.map.qq.com/tools/geolocation?key=7PCBZ-SJ6WQ-J2I5Y-GZIOV-5GZ5F-X7BZL&referer=linyiditu&effect=zoom"></iframe>
+       <!--<iframe    id="markPage" width="100%" height="0%" frameborder=0 scrolling="no" src=""></iframe>-->
+    <form action="#" method="post">
+        <section>
+            <h1>报警基本信息</h1>
+            <div class="weui-cells weui-cells_form">
+                <!--<div class="weui-cell">-->
+                <!--<div class="weui-cell__hd"><label class="weui-label">现场处理情况:</label></div>-->
+                <!--</div>-->
+                <!--<div class="weui-cell">-->
+                <!--<div class="weui-cell__bd">-->
+                <!--<textarea class="weui-textarea" name="xcclqk" placeholder="请输入处警情况" rows="5"></textarea>-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="weui-cell  orientation">
+                    <div class="weui-cell__hd ">
+                        <label class="weui-label">报警地址:</label>
+                    </div>
+                    <span></span>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea or_content"  name="bjdz" placeholder="请输入地址" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">报警人姓名:</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" name="bjrxm" required placeholder="请输入姓名">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">报警人性别:</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input " id="sex"  type="text" name="bjrxb" required placeholder="请选择性别">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">报警时间:</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" id="time" name="bjsj" required placeholder="请选择报警时间">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">联系电话:</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="tel" name="lxdh" required placeholder="请输入联系电话">
+                    </div>
+                </div>
+
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">报警内容:</label></div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" name="bjnr" placeholder="请输入内容" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">联系住址:</label></div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" name="lxdz" placeholder="请输入现住址" rows="5"></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <button>提交</button>
+        </footer>
+    </form>
+</body>
+<script src="js/dw.js"></script>
+
+
+
+</html>

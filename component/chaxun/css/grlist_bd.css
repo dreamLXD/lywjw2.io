@@ -1,0 +1,113 @@
+.title {
+    text-align: center;
+    padding: 15px 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.blue {
+    background-color: rgb(0, 132, 255) !important;
+}
+.weui-dialog__btn{
+    color: rgb(0, 132, 255);
+}
+
+.weui-swiped-btn.weui-swiped-btn_warn.delete-swipeout.blue {
+    line-height: 3rem;
+}
+
+.weui-cell__ft {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.weui-cell__bd {
+    min-width: 80px;
+}
+
+.weui-swiped-btn {
+    padding: 12px 1.5rem !important;
+}
+
+/* xqallrw */
+.gray {
+    color: #999
+}
+
+.black {
+    color: #000 !important
+}
+
+.block {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start !important;
+    align-content: flex-start
+}
+
+.block .weui-cell__ft {
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: none;
+    white-space: normal;
+    text-align: left
+}
+
+.weui-cell__bd {
+    font-size: 16px;
+}
+
+.weui-cell__ft {
+    font-size: 15px;
+}
+
+.blue_color {
+    color: rgb(0, 132, 255) !important;
+}
+
+.weui-form-preview__ft::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #d5d5d6;
+    color: #d5d5d6;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+
+.xqbanner {
+    height: 3rem;
+    border-bottom: 1px solid #ccc;
+    line-height: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.weui-dialog .weui-input {
+    font-size: 18px;
+    color: #999;
+}
+
+.weui-cells_form {
+    padding: 10px 20px;
+}
+
+.weui-btn_primary {
+    width: 80%;
+
+}

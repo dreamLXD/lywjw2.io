@@ -1,0 +1,22 @@
+.br_left {
+  border-left: 1px solid #ccc;
+}
+.br_right {
+  border-right: 1px solid #ccc;
+}
+.br_top {
+  border-top: 1px solid #ccc;
+}
+.br_bottom {
+  border-bottom: 1px solid #ccc;
+}
+
+.br_center:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 1px;
+  background-color: #ccc;
+  position: absolute;
+  left: 50%;
+}

@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>驾驶证年审学习</title>
+	<link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+	<link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/lib/weui.min.css">
+	<link rel="stylesheet" href="../../../component/jiaoguan/jiaoguan/css/allrw.css">
+		<link rel="stylesheet" href="../../../css/weui_biaodan.css">
+		<link rel="stylesheet" href="../../../css/biaodan.css">
+	<link rel="stylesheet" href="../../../component/jiaoguan/jiaoguan/css/grlist_bd.css">
+	<script src="../../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+	<script src="../../../node_modules/jquery-weui/dist/js/jquery-weui.min.js"></script>
+	<script src="../../../component/jiaoguan/jiaoguan/js/Handover.js"></script>
+	<style>
+		.weui_cells_checkbox>label{
+			width: 100%
+		}
+		footer {
+			padding: 10px 0;
+			position: inherit	
+		}
+		body{
+			background-color: #fff
+		}
+		.weui-cells ul {
+			display: flex;
+		}
+
+		.weui-cells ul li {
+			margin-bottom: 8px;
+		}
+
+		.typecell>.weui-cell {
+			border-bottom: 1px solid #ccc;
+		}
+
+		.Sign {
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			background: url("./../../img/Sign.png") no-repeat center;
+			background-size: contain;
+			bottom: 20px;
+			right: 40px;
+			opacity: .3;
+		}
+
+		.weui-dialog__bd .weui-cell {
+			padding: 0 10px;
+		}
+
+		.weui-dialog__bd .weui-cell .weui-input {
+			height: 40px;
+			padding: 5px 5px;
+			font-size: 14px;
+			box-sizing: border-box;
+			border: 1px solid #eee;
+		}
+
+		.weui-textarea {
+			box-sizing: border-box;
+		}
+		.xqbanner{
+			background-color: rgb(74, 143, 253);
+			color: #fff;
+			height: 2rem;
+			line-height: 2rem
+		}
+		.weui-cells{
+			margin-top: 0
+		}
+		
+	</style>
+</head>
+
+
+<body>
+	<div class="zhegai"></div>
+
+
+	<div class="weui-tab__bd">
+		<div id="" class="weui-tab__bd-item weui-tab__bd-item--active">
+			<form action="#">
+	<div class="weui-cells">
+				<div class="xqbanner">
+					<span></span> 驾驶证年审学习模拟测试（200题）<span></span>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__bd">
+
+							<div class="weui-cell">
+								<div class="weui-cell__bd">
+									<p>1.驾驶车辆通过人行横道线时，应注意礼让行人。</p>
+								</div>
+							</div>
+
+							<div class="weui-cell">
+								<div class="weui-cell__bd">
+									<img style="width:100%;height:33%"
+										src="../../../component/jiaoguan/jiaoguan/img/交通事故.jpg" alt="">
+								</div>
+							</div>
+
+							<!-- <div class="weui-cell">
+								<div class="weui-cell__bd">
+									<video controls src="./../../video/1.mp4"></video>
+								</div>
+							</div> -->
+
+
+						<div class="weui_cells weui_cells_checkbox">
+							<div class="weui-cell">
+								<div class="weui-cell__hd">
+									<label class="weui-label">请选择答案:</label>
+								</div>
+							</div>
+							<label class="weui_cell weui_check_label" for="s11">
+								<div class="weui_cell_hd">
+									<input type="checkbox" class="weui_check" name="checkbox1" id="s11"
+									> <i class="weui_icon_checked"></i>
+								</div>
+								<div class="weui_cell_bd weui_cell_primary">
+									<p>应该</p>
+								</div>
+							</label>
+							<label class="weui_cell weui_check_label" for="s12">
+								<div class="weui_cell_hd">
+									<input type="checkbox" name="checkbox2" class="weui_check" id="s12"> <i
+										class="weui_icon_checked"></i>
+								</div>
+								<div class="weui_cell_bd weui_cell_primary">
+									<p>不应该</p>
+								</div>
+							</label>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+			</form>
+		
+		</div>
+	</div>
+	<footer>
+		<a href="javascript:;" class="weui-btn weui-btn_primary blue show ">确认</a>
+	</footer>
+
+
+</body>
+<script src="../../../component/jiaoguan/jiaoguan/js/DriverAnnualStudy.js">
+</script>
+
+
+</html>

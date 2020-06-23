@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自动开锁</title>
+    <link rel="stylesheet" href="../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="../../node_modules/jquery-weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../../css/weui_biaodan.css">
+    <link rel="stylesheet" href="../../css/biaodan.css">
+	<link rel="stylesheet" href="css/MoveingCar.css">
+		<link rel="stylesheet" href="css/mui.picker.min.css">
+	<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/mui.picker.all.js"></script>
+    <script src="../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../../node_modules/jquery-weui/dist/js/jquery-weui.js"></script>
+    <script src="../../node_modules/jquery-weui/dist/js/city-picker.js"></script>
+    <script src="../../js/jiazai.js"></script>
+    <script src="js/Unlocking.js"></script>
+	<style type="text/css">
+		.mui-poppicker-btn-ok{
+			background-color: #006CD7;
+			border: none;
+			outline: none;
+			color: #fff;
+			border-radius: 3px;
+		}
+		.weui-cells_form{
+			box-shadow: 3px 3px 3px #ccc;
+		}
+	</style>
+
+</head>
+
+<body>
+<h1>开锁信息</h1>
+<div class="weui-cells weui-cells_form">
+
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">姓名：</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text"  required  placeholder="请输入姓名">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">手机：</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text"  required  placeholder="请输入手机号码">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">身份证：</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text"  required  placeholder="请输入身份证号码">
+        </div>
+    </div>
+    <div class="weui-cell">
+        <div class="weui-cell__hd"><label class="weui-label">求助类型：</label></div>
+        <div class="weui-cell__bd">
+            <input class="weui-input" type="text" id="showCityPicker3" required readonly  placeholder="选择求助类型">
+        </div>
+    </div>
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">内容：</label></div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__bd" style="width: 100%;">
+                    <textarea class="weui-textarea" placeholder="请输入内容" rows="3"></textarea>
+                    <div class="weui-textarea-counter"></div>
+                </div>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">地址：</label></div>
+        </div>
+        <div class="weui-cell" >
+            <div class="weui-cell__bd" style="width:100%">
+                <input class="weui-input" type="text"  required  placeholder="请输入地址" style="padding: 0">
+            </div>
+        </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<footer>
+    <button>提交</button>
+</footer>
+</body>
+	<script type="text/javascript">
+		let k=true;
+	
+		$('#showCityPicker3').on('click',function(){
+			console.log(k)
+				if(k){
+					var picker = new mui.PopPicker({layer:3});
+						
+					picker.setData([{
+					       value: '110000',
+					       text: '北京市',
+					       children: [{
+					               value: "110101",
+					               text: "东城区1",
+									 children: [{
+									        value: "110101",
+									        text: "东城区2"
+									}]
+					       }],
+					   }, {
+					       value: '120000',
+					       text: '天津市',
+					       children: [{
+						        value: "120101",
+					           text: "和平区"
+					       }, {
+					           value: "120102",
+					           text: "河东区"
+					       }, {
+					           value: "120104",
+					           text: "南开区"
+					       }
+					       ]
+					   }]);
+					   k=false;
+
+					picker.show(function (selectItems) {
+						k=true
+						 console.log(selectItems)
+						 let str='';
+						str= selectItems[0].text;
+					   if(selectItems[1].text){
+						   str+='-'+ selectItems[1].text
+					   }
+						if(selectItems[2].text){
+						   str+= '-'+ selectItems[2].text
+					   }
+					  $('#showCityPicker3').val(str)
+								 
+					 })	
+				}
+				  
+			
+						
+		})
+
+	</script>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/lib/weui.min.css">
+    <!-- <link rel="stylesheet" href="css/allrw.css"> -->
+    <link rel="stylesheet" href="../css/grlist_bd.css">
+    <script src="../../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../../../node_modules/jquery-weui/dist/js/jquery-weui.min.js"></script>
+</head>
+
+<body>
+    <div class="weui-cells">
+        <div class="xqbanner"> <span></span> 处理详情 <span></span></div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>处理民警：</p>
+                    </div>
+                    <div class="weui-cell__ft ">王小明</div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>处理时间:</p>
+                    </div>
+                    <div class="weui-cell__ft">2019-11-12 22：12</div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>处理派出所:</p>
+                    </div>
+                    <div class="weui-cell__ft">108237189812</div>
+                </div>
+                <div class="weui-cell block">
+                    <div class="weui-cell__bd">
+                        <p>处理内容:</p>
+                    </div>
+                    <div class="weui-cell__ft">河东区交通追尾事件</div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>处理情况:</p>
+                    </div>
+                    <div class="weui-cell__ft">正在处理</div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>警情类型:</p>
+                    </div>
+                    <div class="weui-cell__ft">交通</div>
+                </div>
+                <div class="weui-cell  ">
+                    <a href="#" class="weui-btn weui-btn_primary blue ">下一步</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    $(function () {
+        $('.weui-cell_swiped').swipeout()
+
+        $('a').on('click', (e) => {
+            e.preventDefault();
+            window.location.href = 'jindu.html'
+        })
+    })
+</script>
+
+
+</html>

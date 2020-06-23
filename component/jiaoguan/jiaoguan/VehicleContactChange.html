@@ -1,0 +1,138 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>驾驶人联系人联系方式变更</title>
+	<link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+	<link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/lib/weui.min.css">
+	<link rel="stylesheet" href="../../../css/weui_biaodan.css">
+	<link rel="stylesheet" href="../../../css/biaodan.css">
+	<script src="../../../js/jiazai.js"></script>
+	<script src="../../../js/basepath.js"></script>
+	<script src="../../../component/biaodan/huzheng/js/alert.js"></script>
+	<script src="../../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+	<script src="../../../node_modules/jquery-weui/dist/js/jquery-weui.js"></script>
+	<script src="../../../node_modules/jquery-weui/dist/js/city-picker.js"></script>
+	<script src="../../../js/jquery.validate.min.js"></script>
+	<script src="../../../js/regular.js"></script>
+	<script src="../../../js/jiazai.js"></script>
+	<script src="../../../component/jiaoguan/jiaoguan/js/Handover.js"></script>
+
+
+</head>
+
+<body>
+
+	<div class="imgshow" style="display: block; z-index: 1000;">
+		<div>
+			<p class="title"> 类型选择 </p>
+				<p class="zhushi" style="color: red;text-align: center">
+					请在类型中选择符合自己的所办事项
+				</p>
+			<button class="submit">确定</button>
+		</div>
+	</div>
+	<form action="javascript:;" method="post" id='signupForm' novalidate="novalidate">
+		<section>
+			
+			<h1>申报人信息</h1>
+			<div class="weui-cells weui-cells_form" >
+
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">姓名:</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" name="blrxm" >
+					</div>
+				</div>
+
+				<div class="weui-cell">
+				<div class="weui-cell__hd"><label class="weui-label">公民身份证号码:</label></div>
+				<div class="weui-cell__bd">
+					<input class="weui-input" required name="blrsfz" >
+				</div>
+			</div>
+				<input type="hidden" id="openid" name="openid" value="${jbxx.openid}" >
+				<input type="hidden"  id="uuid" name="uuid" value="${jbxx.uuid}">
+			</div>
+			
+			<h1>机动车信息</h1>
+			<div class="weui-cells weui-cells_form">
+			    <div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">机动车所有人：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="jdcsyr" required name="jdcsyr" placeholder="请输入机动车所有人">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">机动车车牌号：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="jdccph" required name="jdccph" placeholder="请输入机动车车牌号">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">机动车车架号：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="jdccjh" required name="jdccjh" placeholder="请输入机动车车架号"> 
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">机动车档案编号：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="jdcdabh" required name="jdcdabh" placeholder="请输入机动车档案编号"> 
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">车辆类型：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="cllx" required name="cllx" placeholder="请输入车辆类型"> 
+					</div>
+				</div>
+			</div>
+
+			<h1>变更后信息</h1>
+              <div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">联系方式：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="lxfs" required name="lxfs" placeholder="请输入联系方式"> 
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">邮政编码：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="yzbm" required name="yzbm" placeholder="请输入邮政编码"> 
+					</div>
+				</div>
+					<div class="weui-cell ">
+						<div class="weui-cell__hd"><label class="weui-label">联系地址:</label></div>
+					</div>
+					<div class="weui-cell ">
+						<div class="weui-cell__bd">
+							<textarea class="weui-textarea" placeholder="请输入联系地址" rows="3" name="lxdz"></textarea>
+							<div class="weui-textarea-counter"><span>0</span>/200</div>
+						</div>
+					</div>
+                    <div class="weui-cell">
+					    <div class="weui-cell__hd"><label class="weui-label">变更原因：</label></div>
+					</div>
+					<div class="weui-cell ">
+						<div class="weui-cell__bd">
+							<textarea class="weui-textarea" placeholder="请输入变更原因" rows="3" name="bgyy"></textarea>
+							<div class="weui-textarea-counter"><span>0</span>/200</div>
+						</div>
+					</div>
+			
+			</div>
+
+		<footer>
+			<button>提交</button>
+		</footer>
+	</form>
+</body>
+<script src="../../../component/jiaoguan/jiaoguan/js/VehicleContactChange.js"></script>
+
+</html>

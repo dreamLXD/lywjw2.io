@@ -1,0 +1,605 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>出国（境）定居注销</title>
+	<link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+	<link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/lib/weui.min.css">
+	<link rel="stylesheet" href="../../../css/weui_biaodan.css">
+	<link rel="stylesheet" href="../../../css/biaodan.css">
+	<script src="../../../js/jiazai.js"></script>
+	<script src="../../../js/basepath.js"></script>
+	<script src="../../../component/biaodan/huzheng/js/alert.js"></script>
+	<script src="../../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+	<script src="../../../node_modules/jquery-weui/dist/js/jquery-weui.js"></script>
+	<script src="../../../node_modules/jquery-weui/dist/js/city-picker.js"></script>
+	<script src="../../../js/jquery.validate.min.js"></script>
+	<script src="../../../js/regular.js"></script>
+	<script src="../../../js/jiazai.js"></script>
+	<script src="../../../component/jiaoguan/jiaoguan/js/Handover.js"></script>
+
+
+</head>
+
+<body>
+
+	<div class="imgshow" style="display: block; z-index: 1000;">
+		<div>
+			<p class="title"> 类型选择 </p>
+				<p class="zhushi" style="color: red;text-align: center">
+					请在类型中选择符合自己的所办事项
+				</p>
+			<button class="submit">确定</button>
+		</div>
+	</div>
+	<form action="javascript:;" method="post" id='signupForm' novalidate="novalidate">
+		<section>
+			
+			<h1>办理类型</h1>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">类型选择：</label></div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" id="style" required name="bltype" placeholder="请选择类型">
+						</div>
+					</div>
+				</div>
+
+			<h1>申报人信息</h1>
+			<div class="weui-cells weui-cells_form" id='MyGray'>
+				<div class="weui_cells weui_cells_checkbox">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">多选:</label></div>
+					</div>
+					<label class="weui_cell weui_check_label" for="s11">
+						<div class="weui_cell_hd">
+							<input type="checkbox" class="weui_check" name="checkbox1" id="s11" checked="checked">
+							<i class="weui_icon_checked"></i>
+						</div>
+						<div class="weui_cell_bd weui_cell_primary">
+							<p>美国</p>
+						</div>
+					</label>
+					<label class="weui_cell weui_check_label" for="s12">
+						<div class="weui_cell_hd">
+							<input type="checkbox" name="checkbox2" class="weui_check" id="s12">
+							<i class="weui_icon_checked"></i>
+						</div>
+						<div class="weui_cell_bd weui_cell_primary">
+							<p>英国</p>
+						</div>
+					</label>
+				</div>
+
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">姓名:</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" name="blrxm" disabled value="${jbxx.zsxm }" required placeholder="">
+					</div>
+				</div>
+
+				<div class="weui-cell">
+				<div class="weui-cell__hd"><label class="weui-label">公民身份证号码:</label></div>
+				<div class="weui-cell__bd">
+					<input class="weui-input" required name="blrsfz" disabled value="${jbxx.sfzh }" placeholder="">
+				</div>
+			</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">日期:</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="date" name="blrsfz"  value="${jbxx.sfzh }" placeholder="">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">性别:</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" required name="blrxb" id ="blrxb" disabled  value="${jbxx.zsxb }" placeholder="">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">联系电话:</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" required name="blrtel" disabled value="${jbxx.tel }" placeholder="">
+					</div>
+				</div>
+				<input type="hidden" id="openid" name="openid" value="${jbxx.openid}" >
+				<input type="hidden"  id="uuid" name="uuid" value="${jbxx.uuid}">
+			</div>
+
+			<h1>办理地点</h1>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">选择分局：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="idfj" required name="blfj" placeholder="请先选择分局">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">选择派出所：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="idpcs" readonly required name="blpcs" placeholder="请选择派出所"> 
+					</div>
+				</div>
+			</div>
+
+			<h1>出国境定居人员信息</h1>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">姓名:</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" name="swryxm" required placeholder="请输入姓名">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">公民身份证号码:</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" required name="swrysfz" placeholder="请输入身份证号码">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">与申请人关系:</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="ysqrgx" required name="ysqrgx" placeholder="请选择关系">
+					</div>
+				</div>
+			</div>
+
+
+
+			<h1>上传材料</h1>
+			<!--  居民户口簿 -->
+			<div class="weui-cells weui-cells_form">
+				<div class="container">
+					<div class="weui_cells weui_cells_form">
+						<div class="weui_cell">
+							<div class="weui_cell_bd weui_cell_primary">
+								<div class="weui_uploader">
+									<div class="weui_uploader_hd weui_cell">
+										<div class="weui_cell_bd weui_cell_primary">
+										居民户口簿
+										</div>
+										<i class="weui-icon-warn weui-icon_msg-primary imgwarn img_i_base1"></i>
+									</div>
+									<div class="weui_uploader_bd">
+										<ul class="weui_uploader_files one">
+										</ul>
+										<div class="weui_uploader_input_wrp">
+											<input class="weui_uploader_input js_file1" type="file" name="img"
+												accept="image/*" multiple=""></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="weui_dialog_alert" style="display: none;">
+					<div class="weui_mask"></div>
+					<div class="weui_dialog ">
+						<div class="weui_dialog_hd"> <strong class="weui_dialog_title">警告</strong>
+						</div>
+						<div class="weui_dialog_bd">弹窗内容，告知当前页面信息等</div>
+						<div class="weui_dialog_ft">
+							<a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+						</div>
+					</div>
+				</div>
+				<div class="imgshow imgshow_base1">
+					<div>
+						<p class="title"> 实例图片</p>
+						<p class="zhushi">
+							请上传户口簿正面，内页，登记卡，索引页等，照片大小不超过5兆。
+						</p>
+					
+						<button>确定</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- 居民身份证 -->
+			<div class="weui-cells   weui-cells_form">
+				<div class="container">
+					<div class="weui_cells weui_cells_form">
+						<div class="weui_cell">
+							<div class="weui_cell_bd weui_cell_primary">
+								<div class="weui_uploader">
+									<div class="weui_uploader_hd weui_cell">
+										<div class="weui_cell_bd weui_cell_primary">居民身份证 </div>
+										<i class="weui-icon-warn weui-icon_msg-primary imgwarn img_i_base2"></i>
+									</div>
+									<div class="weui_uploader_bd">
+										<ul class="weui_uploader_files two">
+										</ul>
+										<div class="weui_uploader_input_wrp">
+											<input class="weui_uploader_input js_file2" type="file" name="img"
+												accept="image/*" multiple></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="weui_dialog_alert" style="display: none;">
+					<div class="weui_mask"></div>
+					<div class="weui_dialog">
+						<div class="weui_dialog_hd"> <strong class="weui_dialog_title">警告</strong>
+						</div>
+						<div class="weui_dialog_bd">弹窗内容，告知当前页面信息等</div>
+						<div class="weui_dialog_ft">
+							<a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+						</div>
+					</div>
+				</div>
+				<div class="imgshow imgshow_base2">
+					<div>
+						<p class="title"> 实例图片 </p>
+						<p class="zhushi">
+						请上传身份证正反面，并保障照片清晰度（图片大小不超过5兆）
+						</p>
+			
+						<button>确定</button>
+					</div>
+				</div>
+			</div>
+
+			<!--市级公安机关出入境管理部门出具的注销户口通知书-->
+			<div class="weui-cells style1  weui-cells_form">
+				<div class="container">
+					<div class="weui_cells weui_cells_form">
+						<div class="weui_cell">
+							<div class="weui_cell_bd weui_cell_primary">
+								<div class="weui_uploader">
+									<div class="weui_uploader_hd weui_cell">
+										<div class="weui_cell_bd weui_cell_primary">
+											市级公安机关出入境管理部门出具的注销户口通知书
+										</div>
+										<i class="weui-icon-warn weui-icon_msg-primary imgwarn img_i_base3"></i>
+									</div>
+									<div class="weui_uploader_bd">
+										<ul class="weui_uploader_files three">
+										</ul>
+										<div class="weui_uploader_input_wrp">
+											<input class="weui_uploader_input js_file3" type="file" name="img"
+												accept="image/*" multiple></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="weui_dialog_alert" style="display: none;">
+					<div class="weui_mask"></div>
+					<div class="weui_dialog">
+						<div class="weui_dialog_hd"> <strong class="weui_dialog_title">警告</strong>
+						</div>
+						<div class="weui_dialog_bd">弹窗内容，告知当前页面信息等</div>
+						<div class="weui_dialog_ft">
+							<a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+						</div>
+					</div>
+				</div>
+				<div class="imgshow imgshow_base3">
+					<div>
+						<p class="title"> 详细介绍 </p>
+						<!--<img src="<%=basePath%>webpage/lywjw/lyswjwwx/img/shili/shili.jpg" alt="">-->
+						<p class="zhushi">
+								请上传市级公安机关出入境管理部门出具的注销户口通知书，暂无示例图片。
+								<br>注意照片大小不超过5兆
+						</p>
+						<button>确定</button>
+					</div>
+				</div>
+			</div>
+
+			<!--外国护照、国外有效身份证明、定居证明、外国使领馆签发的证明文件等（具备其一即可）-->
+			<div class="weui-cells style2  weui-cells_form">
+				<div class="container">
+					<div class="weui_cells weui_cells_form">
+						<div class="weui_cell">
+							<div class="weui_cell_bd weui_cell_primary">
+								<div class="weui_uploader">
+									<div class="weui_uploader_hd weui_cell">
+										<div class="weui_cell_bd weui_cell_primary">
+											外国护照、国外有效身份证明、定居证明、外国使领馆签发的证明文件等（具备其一即可）
+										</div>
+										<i class="weui-icon-warn weui-icon_msg-primary imgwarn img_i_base4"></i>
+									</div>
+									<div class="weui_uploader_bd">
+										<ul class="weui_uploader_files four">
+										</ul>
+										<div class="weui_uploader_input_wrp">
+											<input class="weui_uploader_input js_file4" type="file" name="img"
+												accept="image/*" multiple></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="weui_dialog_alert" style="display: none;">
+					<div class="weui_mask"></div>
+					<div class="weui_dialog">
+						<div class="weui_dialog_hd"> <strong class="weui_dialog_title">警告</strong>
+						</div>
+						<div class="weui_dialog_bd">弹窗内容，告知当前页面信息等</div>
+						<div class="weui_dialog_ft">
+							<a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+						</div>
+					</div>
+				</div>
+				<div class="imgshow imgshow_base4">
+					<div>
+						<p class="title"> 详细介绍 </p>
+						<p class="zhushi">
+								请上传外国护照、国外有效身份证明、定居证明、外国使领馆签发的证明文件等（具备其一即可），暂无示例图片。
+								<br>注意照片大小不超过5兆
+						</p>
+						<button>确定</button>
+					</div>
+				</div>
+			</div>
+
+			<!--香港、澳门地区永久性居民身份证等定居证明-->
+			<div class="weui-cells style3  weui-cells_form">
+				<div class="container">
+					<div class="weui_cells weui_cells_form">
+						<div class="weui_cell">
+							<div class="weui_cell_bd weui_cell_primary">
+								<div class="weui_uploader">
+									<div class="weui_uploader_hd weui_cell">
+										<div class="weui_cell_bd weui_cell_primary">
+											香港、澳门地区永久性居民身份证等定居证明
+										</div>
+										<i class="weui-icon-warn weui-icon_msg-primary imgwarn img_i_base5"></i>
+									</div>
+									<div class="weui_uploader_bd">
+										<ul class="weui_uploader_files five">
+										</ul>
+										<div class="weui_uploader_input_wrp">
+											<input class="weui_uploader_input js_file5" type="file" name="img"
+												accept="image/*" multiple></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="weui_dialog_alert" style="display: none;">
+					<div class="weui_mask"></div>
+					<div class="weui_dialog">
+						<div class="weui_dialog_hd"> <strong class="weui_dialog_title">警告</strong>
+						</div>
+						<div class="weui_dialog_bd">弹窗内容，告知当前页面信息等</div>
+						<div class="weui_dialog_ft">
+							<a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+						</div>
+					</div>
+				</div>
+				<div class="imgshow imgshow_base5">
+					<div>
+						<p class="title"> 详细介绍 </p>
+						<p class="zhushi">
+							请上传香港、澳门地区永久性居民身份证等定居证明，暂无示例图片。
+								<br>
+								注意照片大小不超过5兆
+						</p>
+						<button>确定</button>
+					</div>
+				</div>
+			</div>
+			<!--个人声明-->
+			<div class="weui-cells style3  weui-cells_form">
+				<div class="container">
+					<div class="weui_cells weui_cells_form">
+						<div class="weui_cell">
+							<div class="weui_cell_bd weui_cell_primary">
+								<div class="weui_uploader">
+									<div class="weui_uploader_hd weui_cell">
+										<div class="weui_cell_bd weui_cell_primary">
+											个人声明
+										</div>
+										<i class="weui-icon-warn weui-icon_msg-primary imgwarn img_i_base6"></i>
+									</div>
+									<div class="weui_uploader_bd">
+										<ul class="weui_uploader_files six">
+										</ul>
+										<div class="weui_uploader_input_wrp">
+											<input class="weui_uploader_input js_file6" type="file" name="img"
+												accept="image/*" multiple></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="weui_dialog_alert" style="display: none;">
+					<div class="weui_mask"></div>
+					<div class="weui_dialog">
+						<div class="weui_dialog_hd"> <strong class="weui_dialog_title">警告</strong>
+						</div>
+						<div class="weui_dialog_bd">弹窗内容，告知当前页面信息等</div>
+						<div class="weui_dialog_ft">
+							<a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+						</div>
+					</div>
+				</div>
+				<div class="imgshow imgshow_base6">
+					<div>
+						<p class="title"> 详细介绍 </p>
+						<p class="zhushi">
+							请上传个人声明，暂无示例图片。
+								<br>
+							注意照片大小不超过5兆
+						</p>
+						<button>确定</button>
+					</div>
+				</div>
+			</div>
+			<!--县级以上公安机关出入境管理部门出具额注销户口通知书-->
+			<div class="weui-cells style4  weui-cells_form">
+				<div class="container">
+					<div class="weui_cells weui_cells_form">
+						<div class="weui_cell">
+							<div class="weui_cell_bd weui_cell_primary">
+								<div class="weui_uploader">
+									<div class="weui_uploader_hd weui_cell">
+										<div class="weui_cell_bd weui_cell_primary">
+											县级以上公安机关出入境管理部门出具注销户口通知书
+										</div>
+										<i class="weui-icon-warn weui-icon_msg-primary imgwarn img_i_base7"></i>
+									</div>
+									<div class="weui_uploader_bd">
+										<ul class="weui_uploader_files seven">
+										</ul>
+										<div class="weui_uploader_input_wrp">
+											<input class="weui_uploader_input js_file7" type="file" name="img"
+												accept="image/*" multiple></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="weui_dialog_alert" style="display: none;">
+					<div class="weui_mask"></div>
+					<div class="weui_dialog">
+						<div class="weui_dialog_hd"> <strong class="weui_dialog_title">警告</strong>
+						</div>
+						<div class="weui_dialog_bd">弹窗内容，告知当前页面信息等</div>
+						<div class="weui_dialog_ft">
+							<a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+						</div>
+					</div>
+				</div>
+				<div class="imgshow imgshow_base7">
+					<div>
+						<p class="title"> 详细介绍 </p>
+						<p class="zhushi">
+								请上传县级以上公安机关出入境管理部门出具注销户口通知书。暂无示例图片。
+								<br>注意照片大小不超过5兆
+						</p>
+						<button>确定</button>
+					</div>
+				</div>
+			</div>
+			<!--居住国居留证件或证明-->
+			<div class="weui-cells style5  weui-cells_form">
+				<div class="container">
+					<div class="weui_cells weui_cells_form">
+						<div class="weui_cell">
+							<div class="weui_cell_bd weui_cell_primary">
+								<div class="weui_uploader">
+									<div class="weui_uploader_hd weui_cell">
+										<div class="weui_cell_bd weui_cell_primary">
+											居住国居留证件或证明
+										</div>
+										<i class="weui-icon-warn weui-icon_msg-primary imgwarn img_i_base8"></i>
+									</div>
+									<div class="weui_uploader_bd">
+										<ul class="weui_uploader_files eight">
+										</ul>
+										<div class="weui_uploader_input_wrp">
+											<input class="weui_uploader_input js_file8" type="file" name="img"
+												accept="image/*" multiple></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="weui_dialog_alert" style="display: none;">
+					<div class="weui_mask"></div>
+					<div class="weui_dialog">
+						<div class="weui_dialog_hd"> <strong class="weui_dialog_title">警告</strong>
+						</div>
+						<div class="weui_dialog_bd">弹窗内容，告知当前页面信息等</div>
+						<div class="weui_dialog_ft">
+							<a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+						</div>
+					</div>
+				</div>
+				<div class="imgshow imgshow_base8">
+					<div>
+						<p class="title"> 详细介绍 </p>
+						<p class="zhushi">
+									请上传居住国居留证件或证明，暂无示例图片。
+								<br>注意照片大小不超过5兆
+						</p>
+						<button>确定</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<button>提交</button>
+		</footer>
+	</form>
+</body>
+<script src="../../../component/jiaoguan/jiaoguan/js/Below.js">
+/* 	//ajax获取数据。
+	// 	myajax({url:'url',data:'data'},function (item) {
+	// 		console.log(item)
+	// 	})
+
+	listObj({
+		//想要隐藏的
+		Hid: ['.style1', '.style2', '.style3', '.style4', '.style5'],
+		//日期选择器
+		date:['#date'],
+		//下拉列表
+		select:[
+			{id:'#style',items:[{
+					title: "公民经批准前往香港、澳门、台湾定居",
+					value: "11dd26f4ac1640198fc3bb77afcf89e9",
+				},
+					{
+						title: "公民出国定居或取得外国国籍注销户口",
+						value: "f353d2870d3049f3a7e44e5c2654df7c",
+					},
+					{
+						title: "公民自行在香港、澳门地区取得定居资格注销户口",
+						value: "6b72b16dc12343599c6e481a5a478730",
+					},
+					{
+						title: "公民自行在台湾地区取得定居资格后注销户口",
+						value: "0017d499ca754eba8e2ecd6db6653b01",
+					},
+					{
+						title: "公民出国后已获得居住国永久居留权注销户口",
+						value: "176761c600fd43898e35334e48d8dcea",
+					}
+				],url:'url',data:[]}
+		],
+		//上传图片
+		img_show: [
+			['.img_i_base1', '.imgshow_base1', '.js_file1', '.one'],
+			['.img_i_base2', '.imgshow_base2', '.js_file2', '.two'],
+			['.img_i_base3', '.imgshow_base3', '.js_file3', '.three'],
+			['.img_i_base4', '.imgshow_base4', '.js_file4', '.four'],
+			['.img_i_base5', '.imgshow_base5', '.js_file5', '.five'],
+			['.img_i_base6', '.imgshow_base6', '.js_file6', '.six'],
+			['.img_i_base7', '.imgshow_base7', '.js_file7', '.seven'],
+			['.img_i_base8', '.imgshow_base8', '.js_file8', '.eight'],
+		],
+		//上传图片的处理
+		img_str: [
+			['arr_file1', '.one', 'onefile', 'f4e05d3d86fb49af9202dc7798414d07'],
+			['arr_file2', '.two', 'twofile', '48fb29abf5374017a1650fedb110ded2'],
+			['arr_file3', '.three', 'threefile', '5d9d384694004966aef5aa54a6a3ba0e'],
+			['arr_file4', '.four', 'fourfile', 'dd52e45697d94069a6e54c46d84b0c17'],
+			['arr_file5', '.five', 'fivefile', '873403bf9e5e4f4f8fe6205faa83404a'],
+			['arr_file6', '.six', 'sixfile', '0da29d0c45514243839b21701c2d543d'],
+			['arr_file7', '.seven', 'sevenfile', 'dd059eb9738c41c59bb209e34d9b9163'],
+			['arr_file8', '.eight', 'eightfile', '2ead8df7362e4ef2942b56399a693009'],
+		],
+		//数据下拉框的处理
+		upload:[{name:'bltype',id:'#style'}],
+		//上传数据url
+		data_url:'dasds/sadsa'
+	}) */
+
+</script>
+</html>

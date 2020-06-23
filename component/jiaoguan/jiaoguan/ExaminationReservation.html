@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>驾驶证延期审验</title>
+		<link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+		<link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/lib/weui.min.css">
+		<link rel="stylesheet" href="../../../css/weui_biaodan.css">
+		<link rel="stylesheet" href="../../../css/biaodan.css">
+		<script src="../../../js/jiazai.js"></script>
+		<script src="../../../js/basepath.js"></script>
+		<script src="../../../component/biaodan/huzheng/js/alert.js"></script>
+		<script src="../../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+		<script src="../../../node_modules/jquery-weui/dist/js/jquery-weui.js"></script>
+		<script src="../../../node_modules/jquery-weui/dist/js/city-picker.js"></script>
+		<script src="../../../js/jquery.validate.min.js"></script>
+		<script src="../../../js/regular.js"></script>
+		<script src="../../../js/jiazai.js"></script>
+		<script src="../../../component/jiaoguan/jiaoguan/js/Handover.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="imgshow" style="display: block; z-index: 1000;">
+			<div>
+				<p class="title"> 类型选择 </p>
+				<p class="zhushi" style="color: red;text-align: center">
+					请在类型中选择符合自己的所办事项
+				</p>
+				<button class="submit">确定</button>
+			</div>
+		</div>
+		<form action="javascript:;" method="post" id='signupForm' novalidate="novalidate">
+			<section>
+
+		 
+				<!--<div class="weui-cells weui-cells_form" id='MyGray'>
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">号码号牌:</label></div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" type="text" name="carnumber"  required placeholder="">
+						</div>
+					</div>
+
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">所有人:</label></div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" type="text" name="attributor"  required placeholder="">
+						</div>
+					</div>-->
+				<h1>申报人信息</h1>
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">姓名：</label></div>
+						<div class="weui-cell__bd">
+							张三
+						</div>
+					</div>
+				</div>
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">身份证号：</label></div>
+						<div class="weui-cell__bd">
+							370683199999999999
+						</div>
+					</div>
+				</div>
+
+				<h1>驾驶证延期审验</h1>
+				
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">状态：</label></div>
+						<div class="weui-cell__bd">
+							正常
+						</div>
+					</div>
+				</div>
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">档案编号：</label></div>
+						<div class="weui-cell__bd">
+							123456789
+						</div>
+					</div>
+				</div>
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">驾驶证号码：</label></div>
+						<div class="weui-cell__bd">
+							37078899990000
+						</div>
+					</div>
+				</div>
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">初次领证日期：</label></div>
+						<div class="weui-cell__bd">
+							2016-10-10
+						</div>
+					</div>
+				</div>
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">有效期止日期：</label></div>
+						<div class="weui-cell__bd">
+							2022-10-10
+						</div>
+					</div>
+				</div>
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">准驾车型：</label></div>
+						<div class="weui-cell__bd">
+							C1
+						</div>
+					</div>
+				</div>
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">下一体检日期：</label></div>
+						<div class="weui-cell__bd">
+							2022-10-10
+						</div>
+					</div>
+				</div>
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">清分日期：</label></div>
+						<div class="weui-cell__bd">
+							2022-10-10
+						</div>
+					</div>
+				</div>
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">累计记分：</label></div>
+						<div class="weui-cell__bd">
+							6
+						</div>
+					</div>
+				</div>
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">延期原因：</label></div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" id="carattributes" required name="carattributes" placeholder="请选择延期原因">
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" id="openid" name="openid" value="${jbxx.openid}">
+				<input type="hidden" id="uuid" name="uuid" value="${jbxx.uuid}">
+
+				</div>
+			</section>
+			<footer>
+				<button>提交</button>
+			</footer>
+		</form>
+	</body>
+	<script src="../../../component/jiaoguan/jiaoguan/js/Below.js">
+	</script>
+	<script src="../../../component/jiaoguan/jiaoguan/js/CarType.js"></script>
+	<script src="../../../component/jiaoguan/jiaoguan/js/DriveType.js"></script>
+	<script src="../../../component/jiaoguan/jiaoguan/js/CarAttributes.js"></script>
+	<script src="../../../component/jiaoguan/jiaoguan/js/FuelType.js"></script>
+
+</html>

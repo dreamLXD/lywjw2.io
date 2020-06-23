@@ -1,0 +1,154 @@
+body{
+    background-color: #EEEEEE;
+    font-size: 14px;
+}
+.container{
+    padding: 10px;
+}
+.box_list {
+    background-color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    margin-top:10px;
+}
+
+.top_box{
+    padding: 5px 20px;
+     margin: 5px 0;
+     display: inline-block;
+     color: #fff;
+     border-radius: 5px;
+     position: relative;
+}
+
+.box{
+    padding: 0 20px;
+    border: 1px solid #999999;
+}
+a.box_list{
+	box-shadow: 3px 3px 3px #ccc;
+}
+.box .box_title{
+    text-align: center;
+}
+.box div{
+    padding: 5px 0;
+}
+.clearfix{
+	color:#999
+}
+.box div span{
+    float: left;
+}
+.box div span:nth-of-type(2){
+    float: right;
+}
+.clearfix:before,.clearfix:after{
+    content: '';
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+}
+
+/*-------- 换色 -------------*/
+/*---------------- green -------------------*/
+
+.green_one{
+    border-left: 3px solid #1AAD19;
+}
+.green_one:before{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #1AAD19;
+    position: absolute;
+    top: 20px;
+    left:0;
+    border-radius: 50%;
+    transform: translateX(-60%);
+}
+.green_two{
+    background-color: #1AAD19;
+}
+
+.green_two:before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -3%;
+    transform: skewX(30deg) rotateZ(-20deg) ;
+    background-color: #1AAD19;
+}
+
+
+/*---------------- yellow -------------------*/
+.yellow_two{
+    background-color: #ffc007;
+}
+.yellow_two:before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -3%;
+    transform: skewX(30deg) rotateZ(-20deg) ;
+    background-color: #ffc007;
+}
+.yellow_one{
+    border-left: 3px solid #ffc007;
+}
+.yellow_one:before{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #ffc007;
+    position: absolute;
+    top: 20px;
+    left:0;
+    border-radius: 50%;
+    transform: translateX(-60%);
+}
+/*---------------- blue -------------------*/
+
+.blue_two{
+    background-color: #5cb4ff;
+}
+.blue_two:before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -3%;
+    transform: skewX(30deg) rotateZ(-20deg) ;
+    background-color: #5cb4ff;
+}
+.blue_one{
+    border-radius: 5px;
+    border-left: 3px solid #5cb4ff;
+}
+.blue_one:before{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #5cb4ff;
+    position: absolute;
+    top: 20px;
+    left:0;
+    border-radius: 50%;
+    transform: translateX(-60%);
+}
+a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+}

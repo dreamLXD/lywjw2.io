@@ -1,0 +1,14 @@
+.weui_loading{
+    position: initial;
+    width: auto;
+    z-index: auto;
+    left: 50%;
+    top: 50%;
+}
+.weui-toast{
+	top: 50%;margin-left: 0;
+}
+.weui-icon_toast.weui-loading{
+    width: 40px;
+    height: 40px;
+}

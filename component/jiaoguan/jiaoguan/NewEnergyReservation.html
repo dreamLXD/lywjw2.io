@@ -1,0 +1,124 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>新能源汽车号牌换发预约</title>
+	<link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+	<link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/lib/weui.min.css">
+	<link rel="stylesheet" href="../../../css/weui_biaodan.css">
+	<link rel="stylesheet" href="../../../css/biaodan.css">
+	<script src="../../../js/jiazai.js"></script>
+	<script src="../../../js/basepath.js"></script>
+	<script src="../../../component/biaodan/huzheng/js/alert.js"></script>
+	<script src="../../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+	<script src="../../../node_modules/jquery-weui/dist/js/jquery-weui.js"></script>
+	<script src="../../../node_modules/jquery-weui/dist/js/city-picker.js"></script>
+	<script src="../../../js/jquery.validate.min.js"></script>
+	<script src="../../../js/regular.js"></script>
+	<script src="../../../js/jiazai.js"></script>
+	<script src="../../../component/jiaoguan/jiaoguan/js/Handover.js"></script>
+
+
+</head>
+
+<body>
+
+	<div class="imgshow" style="display: block; z-index: 1000;">
+		<div>
+			<p class="title"> 类型选择 </p>
+				<p class="zhushi" style="color: red;text-align: center">
+					请在类型中选择符合自己的所办事项
+				</p>
+			<button class="submit">确定</button>
+		</div>
+	</div>
+	<form action="javascript:;" method="post" id='signupForm' novalidate="novalidate">
+		<section>
+			
+			<h1>号牌类型</h1>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">号牌种类：</label></div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" id="style" required name="hptype" placeholder="请选择类型">
+						</div>
+					</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">号牌号码:</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" name="hphm" >
+					</div>
+				</div>
+					
+				</div>
+
+			<h1>申报人信息</h1>
+			<div class="weui-cells weui-cells_form" >
+
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">姓名:</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" type="text" name="blrxm" >
+					</div>
+				</div>
+
+				<div class="weui-cell">
+				<div class="weui-cell__hd"><label class="weui-label">公民身份证号码:</label></div>
+				<div class="weui-cell__bd">
+					<input class="weui-input" required name="blrsfz" >
+				</div>
+			</div>
+
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">联系电话:</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" required name="blrtel">
+					</div>
+				</div>
+				<input type="hidden" id="openid" name="openid" value="${jbxx.openid}" >
+				<input type="hidden"  id="uuid" name="uuid" value="${jbxx.uuid}">
+			</div>
+			
+			<h1>车辆信息</h1>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">中文品牌：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="zwpp" required name="zwpp" placeholder="请输入中文品牌">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">车辆型号：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="clxh" required name="clxh" placeholder="请输入车辆型号"> 
+					</div>
+				</div>
+			</div>
+
+			<h1>办理地点</h1>
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">预约网点：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="yywd" required name="yywd" placeholder="请选择预约网点">
+					</div>
+				</div>
+				<div class="weui-cell">
+					<div class="weui-cell__hd"><label class="weui-label">预约日期：</label></div>
+					<div class="weui-cell__bd">
+						<input class="weui-input" id="date" required name="yyrq" placeholder="请选择预约日期"> 
+					</div>
+				</div>
+			</div>
+
+		<footer>
+			<button>提交</button>
+		</footer>
+	</form>
+</body>
+<script src="../../../component/jiaoguan/jiaoguan/js/NewEnergyReservation.js"></script>
+</html>

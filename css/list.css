@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+section {
+    background-color: #fff;
+}
+
+.list {
+    padding: 8px 20px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    color: #000;
+    display: block;
+    text-decoration: none;
+}
+
+.list img {
+    width: 7%;
+    float: left;
+    margin-right: 10px;
+}
+
+.list p {
+    width: 80%;
+    margin: 0;
+    float: left;
+    line-height: 24px;
+}
+
+.list::before,
+.list::after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both;
+}
+
+.gen:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 100%;
+    top: 0;
+    right: 20px;
+    background: url("../img/gen.png") no-repeat center;
+    background-size: 100%;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff
+}
+
+footer a {
+    padding: 5px 0;
+    width: 20%;
+    float: left;
+    box-sizing: border-box
+}
+
+footer a img {
+    display: block;
+    width: 35%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+footer a p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    line-height: 16px;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+.textb {
+    color: #1e51b9;
+
+}
+
+footer a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #555
+}

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="../../node_modules/jquery-weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="css/allrw.css">
+    <link rel="stylesheet" href="css/grlist_bd.css">
+    <link rel="stylesheet" href="css/grlist_bd_2.css">
+    <!--<link rel="stylesheet" href="../../css/biaodan.css">-->
+    <script src="../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../../node_modules/jquery-weui/dist/js/jquery-weui.min.js"></script>
+    <script src="../../js/jquery.validate.min.js"></script>
+    <script src="js/regular.js"></script>
+	<style type="text/css">
+
+        /*label.error {*/
+            /*!*background: url("./demo/images/unchecked.gif") no-repeat 0px 0px;*!*/
+            /*padding-left: 16px;*/
+
+            /*padding-bottom: 2px;*/
+
+            /*font-weight: bold;*/
+
+            /*color: #EA5200;*/
+        /*}*/
+
+        /*label.checked {*/
+            /*!*background: url("./demo/images/checked.gif") no-repeat 0px 0px;*!*/
+        /*}*/
+
+        .weui-cells ul{
+			display: flex;
+		}
+        .weui-cell__ft{
+            color: #666;
+        }
+		.weui-cells ul li{
+			margin-bottom: 8px;
+		}
+		.typecell>.weui-cell{
+			border-bottom: 1px solid #666;
+		}
+        input{
+            text-align: right;
+        }
+        .blue_color{
+            background-color: rgb(88, 174, 255) !important;
+            color:#fff !important;
+            box-shadow: -3px -3px 3px #b9b9b9;
+        }
+        input,textarea{
+            color: #888 !important;
+        }
+         .typecell .weui-cell:nth-last-of-type(1){
+             border: none;
+         }
+        .weui-input{
+            padding-right: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .weui-textarea{
+            padding-right: 10px;
+            padding-left: 0 !important;
+        }
+        .xqbanner{
+            padding: 0;
+        }
+        input,textarea{
+            padding-left:10px;
+        }
+        textarea.error,input.error {
+            position: relative;
+            border: 1px solid red !important;
+            box-sizing: border-box
+        }
+
+        textarea.error::-webkit-input-placeholder,input.error::-webkit-input-placeholder {
+            color:red !important;
+            font-size:12px;
+            transform: translateX(10px)
+
+
+        }
+        textarea,input{
+            transform: translateX(0);
+            transition: all 1s;
+        }
+	</style>
+</head>
+
+<body>
+    <div class="zhegai"></div>
+
+    <div class="weui-tab">
+        <div class="weui-navbar">
+            <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+                用户详情
+            </a>
+            <a class="weui-navbar__item" href="#tab2">
+                出警单
+            </a>
+        </div>
+        <div class="weui-tab__bd">
+            <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                <div class="weui-cells">
+                    <div class="xqbanner"> <span></span> 基本信息 <span></span></div>
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <div class="weui-cell">
+                                <div class="weui-cell__bd">
+                                    <p>报警人：</p>
+                                </div>
+                                <div class="weui-cell__ft ">王小明</div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__bd">
+                                    <p>报警时间:</p>
+                                </div>
+                                <div class="weui-cell__ft">2019-11-12 22：12</div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__bd">
+                                    <p>联系电话:</p>
+                                </div>
+                                <div class="weui-cell__ft">108237189812</div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__bd">
+                                    <p>事件单编号:</p>
+                                </div>
+                                <div class="weui-cell__ft">108237189812</div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__bd">
+                                    <p>报警电话:</p>
+                                </div>
+                                <div class="weui-cell__ft">108237189812</div>
+                            </div>
+                            <div class="weui-cell block">
+                                <div class="weui-cell__bd">
+                                    <p>警情地址:</p>
+                                </div>
+                                <div class="weui-cell__ft">东高庄奥术大师大所多撒多撒大所多撒多撒多撒啊</div>
+                            </div>
+                            <div class="weui-cell block">
+                                <div class="weui-cell__bd">
+                                    <p>报警内容:</p>
+                                </div>
+                                <div class="weui-cell__ft">房屋被拆房屋被拆房屋被拆房屋被拆房屋被拆房屋被拆房屋被拆房屋被拆</div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__bd">
+                                    <p>警情类型:</p>
+                                </div>
+                                <div class="weui-cell__ft">刑事</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="weui-tab__bd-item">
+                <form action="#" method="post" id='signupForm' >
+                    <div class="weui-cells">
+                        <div class="xqbanner"> <span></span> 现场视频 <span></span></div>
+                        <div class="weui-cell">
+                            <video controls src="./../../video/1.mp4"></video>
+                        </div>
+                    </div>
+                    <div class="weui-cells">
+                        <div class="xqbanner"> <span></span> 照片材料 <span></span></div>
+                        <ul>
+                            <li><img src="../../img/xinwen/xw1.jpg" alt=""></li>
+                            <li><img src="../../img/xinwen/wx2.jpg" alt=""></li>
+                            <li><img src="../../img/xinwen/wx3.jpg" alt=""></li>
+                            <li><img src="../../img/xinwen/wx4.jpg" alt=""></li>
+                            <li><img src="../../img/xinwen/wx5.jpg" alt=""></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="weui-cells">
+                        <div class="xqbanner"> <span></span> 现场详情 <span></span></div>
+
+
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>案发场所类别：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input class="weui-input" name="afcslb" id="afcslb" type="text" value="刑事">
+                                    </div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>案发场所类型：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input class="weui-input" name="afcslx"  id="aflx" type="text" value="刑事">
+                                    </div>
+                                </div>
+                                <div class="weui-cell block">
+                                    <div class="weui-cell__bd">
+                                        <p>案发地点:</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        山东省临沂市河东区滨河东路新四军军部旧址纪念馆
+                                    </div>
+                                </div>
+
+                                <div class="weui-cell block">
+                                    <div class="weui-cell__bd">
+                                        <p>警情处理情况:</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        <textarea class="weui-textarea"  name="xcclqk" rows="3">山东省临沂市河东区滨河东路产生纠纷事件</textarea>
+                                    </div>
+                                </div>
+
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>死亡人数（人）：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input class="weui-input" name="swrs" type="text" value="2">
+                                    </div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>受伤人数（人）：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input class="weui-input" name="ssrs" type="text" value="2">
+                                    </div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>直接损失金额(万元)：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input class="weui-input" name="zjjjss" type="text" value="2.3">
+                                    </div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>到场时间：</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        2019-03-11 12：21
+                                    </div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>案发开始时间：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input id="timeOne" name="afsj" class="weui-input" type="text" value="2019-03-11 12：21">
+                                    </div>
+                                </div>
+
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>处警结束时间：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input id="timeTwo" class="weui-input" name="afjssj" type="text" value="2019-03-11 12：21">
+
+                                    </div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>现场有无证据：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input  id="yesNo" class="weui-input" name="xczj" type="text" value="有">
+                                    </div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>视频份数（份）：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input class="weui-input" name="spfs" type="text" value="2">
+
+                                    </div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>照片份数（份）：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input class="weui-input" name="zpfs" type="text" value="2">
+                                    </div>
+                                </div>
+                                <!--<div class="weui-cell">-->
+                                    <!--<div class="weui-cell__bd">-->
+                                        <!--<p>录音份数（份）：</p>-->
+                                    <!--</div>-->
+                                    <!--<div class="weui-cell__ft ">-->
+                                        <!--<input class="weui-input" type="text" value="2">-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>物证份数（份）：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input class="weui-input" name="zwfs" type="text" value="2">
+                                    </div>
+                                </div>
+
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>处理民警:</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input class="weui-input" name="cdjyxm" type="text" value="王小明">
+                                    </div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>警情类别:</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input id="jqlb" class="weui-input" name="jqlbdm" type="text" value="刑事">
+                                    </div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>警情类型:</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input id="jqlx" class="weui-input" name="jqlxdm" type="text" value="刑事">
+                                    </div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>警情细类:</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input id="jqType" class="weui-input" name="jqxldm" type="text" value="刑事">
+                                    </div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>处理结果:</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">
+                                        <input id="jqcljg" class="weui-input" name="jqcljg" type="text" value="刑事">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-cells typecell">
+                        <div class="xqbanner"> <span></span> 当事人 <span></span></div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>当事人姓名：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">王小明</div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>联系人电话：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">198827721</div>
+                                </div>
+                                <div class="weui-cell block">
+                                    <div class="weui-cell__bd">
+                                        <p>身份证号码/现住地址/其他:</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        兰山区天津路十字路口北面300米
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>当事人姓名：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">王小明</div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>联系人电话：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">198827721</div>
+                                </div>
+                                <div class="weui-cell block">
+                                    <div class="weui-cell__bd">
+                                        <p>身份证号码/现住地址/其他:</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        兰山区天津路十字路口北面300米
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="weui-cells typecell">
+                        <div class="xqbanner"> <span></span> 见证人 <span></span></div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>见证人姓名：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">王小明</div>
+                                </div>
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <p>联系人电话：</p>
+                                    </div>
+                                    <div class="weui-cell__ft ">198827721</div>
+                                </div>
+                                <div class="weui-cell block">
+                                    <div class="weui-cell__bd">
+                                        <p>身份证号码/现住地址/其他:</p>
+                                    </div>
+                                    <div class="weui-cell__ft">
+                                        兰山区天津路十字路口北面300米
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div class="weui-form-preview__ft">
+            <!--<a class="weui-form-preview__btn weui-form-preview__btn_default show " href="javascript:">修改</a>-->
+            <button type="submit" class="weui-form-preview__btn weui-form-preview__btn_primary blue_color">通过</button>
+        </div>
+    </footer>
+    <!--<div class="weui-mask weui-mask&#45;&#45;visible my_preview"></div>-->
+    <!--<div class="weui-dialog weui-dialog&#45;&#45;visible my_preview">-->
+        <!--<div class="weui-dialog__hd">-->
+            <!--<strong class="weui-dialog__title">修改</strong></div>-->
+        <!--<div class="weui-dialog__bd">-->
+            <!--<p class="weui-prompt-text"></p>-->
+            <!--<div class="weui-cells weui-cells_form">-->
+                <!--<div class="weui-cells__title">警情类型</div>-->
+                <!--<div class="weui-cells">-->
+                    <!--<div class="weui-cell">-->
+                        <!--<div class="weui-cell__bd">-->
+                            <!--<input class="weui-input" id="type_show" type="text" placeholder="请选择">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="weui-dialog__ft"><a href="javascript:;" class="weui-dialog__btn default  del_close">取消</a><a-->
+                <!--href="javascript:;" class="weui-dialog__btn primary submit blue_color">提交</a></div>-->
+    <!--</div>-->
+
+</body>
+<script src="./js/shenpi_xp.js"></script>
+
+
+</html>

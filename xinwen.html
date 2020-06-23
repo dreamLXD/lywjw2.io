@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="node_modules/jquery-weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="css/xinwen.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="./node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+</head>
+
+<body>
+
+    <section>
+
+        <div class="list one ">
+
+            <a href="component/xinwen/xinwen_content.html" class="content fixclear">
+                <img src="img/zhou.png" alt="">
+                <div>
+                    <p>鲁南高铁提前通车成定局</p>
+                    <p><span>山东省公安厅</span><span>2019-02-18 16:12:00</span></p>
+                </div>
+            </a>
+            <a href="component/xinwen/xinwen_content2.html" class="content fixclear">
+                <img src="img/zhou.png" alt="">
+                <div>
+                    <p>联合国教科文组织正式批准临沂沂蒙山为世界地质公园</p>
+                    <p><span>山东省公安厅</span><span>2019-02-10 18:12:00</span></p>
+                </div>
+            </a>
+            <a href="component/xinwen/xinwen_content3.html" class="content fixclear">
+                <img src="img/zhou.png" alt="">
+                <div>
+                    <p>孟庆斌调研督导防汛工作</p>
+                    <p><span>山东省公安厅</span><span>2019-02-03 8:12:00</span></p>
+                </div>
+            </a>
+
+        </div>
+        <div class="list two">
+            <div class="content yiwang  fixclear">
+                <img src="img/yue.png" alt="">
+                <div>
+                    <p>以往新闻资讯查看</p>
+                </div>
+            </div>
+            <a href="component/xinwen/xinwen_content4.html" class="content_list  fixclear">
+                <div>
+                    <p>青岛—临沂融合发展推介会举行</p>
+                    <p><span>山东省公安厅</span><span>2019-02-18 16:12:00</span></p>
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+    <footer class="fixclear">
+        <a href="index.html">
+            <img src="img/new_box/bnt1.png" alt="">
+            <p>首页</p>
+        </a>
+
+        <a href="tab.html">
+            <img src="img/new_box/btn3.png" alt="">
+            <p>办理</p>
+        </a>
+        <a href="chaxun.html">
+            <img src="img/new_box/btn4.png" alt="">
+            <p>查询</p>
+        </a>
+        <a href="xinwen.html">
+            <img src="img/new_box/bnt_5.png" alt="">
+            <p class="textb">资讯</p>
+        </a>
+        <a href="jingqing.html">
+            <img src="img/new_box/btn6.png" alt="">
+            <span class="weui-badge" style="position: absolute;top: -.4em;right: 0.7em;">12</span>
+            <p>警务</p>
+        </a>
+        <!-- <a href="LIST.html">
+            <img src="img/new_box/bnt2.png" alt="">
+            <p>个人中心</p>
+        </a> -->
+    </footer>
+
+</body>
+<script>
+    $('.yiwang').on('click', function () {
+        if ($('.yiwang>div').hasClass('move')) {
+            $('.yiwang>div').removeClass('move')
+            $('.content_list').css('display', 'none')
+
+        } else {
+            $('.yiwang > div').addClass('move');
+            $('.content_list').css('display', 'block')
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,297 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    background-color: #eee
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+header img {
+    width: 100%
+}
+
+header {
+    width: 100%;
+}
+
+.fixclear::before,
+.fixclear::after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+}
+
+/* section */
+section {
+    padding: 5px 10px 80px 10px;
+}
+
+
+
+
+section .list {
+    box-shadow: 3px 3px 5px #ccc;
+    position: relative;
+
+    margin-top: 10px;
+    padding-left: 20px;
+    background-color: #fff;
+
+}
+
+section .list .list_box {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+section .list .list_box a {
+    width: 50%;
+    float: left;
+    padding: 5px 0;
+    font-size: 12px;
+    color: #999;
+    text-decoration: none;
+    position: relative;
+}
+
+section .list .list_box img {
+    width: 12%;
+    font-size: 0;
+    float: left;
+    margin-right: 5px;
+}
+
+section .list .list_box span {
+    position: absolute;
+    width: 85%;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+        /* vertical-align: text-bottom; */
+}
+
+section h3 {
+    padding: 3px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.green {
+    border-left: 3px solid #40ba9b;
+
+}
+
+.green::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 17px;
+    left: -7px;
+    background-color: #40ba9b;
+    border-radius: 50%;
+}
+
+.green_h3 {
+    background-color: #40ba9b
+}
+
+.green_h3::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: -4px;
+    background-color: #40ba9b;
+    transform: rotateZ(45deg)
+}
+
+
+.green {
+    border-left: 3px solid #40ba9b;
+
+}
+
+/* 通用颜色设置 */
+/* green */
+.green::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 17px;
+    left: -7px;
+    background-color: #40ba9b;
+    border-radius: 50%;
+}
+
+.green_h3 {
+    background-color: #40ba9b
+}
+
+.green_h3::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: -4px;
+    background-color: #40ba9b;
+    transform: rotateZ(45deg)
+}
+
+/* blue */
+.blue {
+    border-left: 3px solid #2184d3;
+
+}
+
+.blue::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 17px;
+    left: -7px;
+    background-color: #2184d3;
+    border-radius: 50%;
+}
+
+.blue_h3 {
+    background-color: #2184d3
+}
+
+.blue_h3::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: -4px;
+    background-color: #2184d3;
+    transform: rotateZ(45deg)
+}
+
+/* yellow */
+.yellow {
+    border-left: 3px solid #e6a94a;
+
+}
+
+.yellow::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 17px;
+    left: -7px;
+    background-color: #e6a94a;
+    border-radius: 50%;
+}
+
+.yellow_h3 {
+    background-color: #e6a94a
+}
+
+.yellow_h3::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: -4px;
+    background-color: #e6a94a;
+    transform: rotateZ(45deg)
+}
+
+/* pink */
+.pink {
+    border-left: 3px solid #c475d0;
+
+}
+
+.pink::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 17px;
+    left: -7px;
+    background-color: #c475d0;
+    border-radius: 50%;
+}
+
+.pink_h3 {
+    background-color: #c475d0
+}
+
+.pink_h3::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: -4px;
+    background-color: #c475d0;
+    transform: rotateZ(45deg)
+}
+
+
+/* footer */
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff
+}
+
+footer a {
+    padding: 5px 0;
+    width: 20%;
+    float: left;
+    box-sizing: border-box
+}
+
+footer a img {
+    display: block;
+    width: 35%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+footer a p {
+    text-align: center
+}
+
+.textb {
+    color: #1e51b9
+}
+
+footer a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #555
+}

@@ -1,0 +1,122 @@
+img {
+    width: 100%
+}
+
+section {
+    padding: 0 20px;
+    margin-top: 20px;
+}
+.clear::before,.clear::after{
+	content: '';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	overflow: hidden;
+}
+.list {
+    border: none;
+    border-radius: 5px;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    box-shadow: 2px 2px 3px #ccc;
+    margin-bottom: 10px;
+}
+#jybb  .weui-switch{
+	position: absolute;
+	right: 20px;
+	top: 4px;
+}
+.weui-form-checkbox[type="radio"]:checked + label .weui-icon-radio,.weui-switch-cp__input:checked ~ .weui-switch-cp__box, .weui-switch:checked{
+	background-color: rgb(21, 164, 231);
+	border: 1px solid rgb(21, 164, 231);
+}
+
+.weui-form-li.iblock{
+	width: 50%;
+	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
+	float: left;
+}
+#jybb  label{
+	width: 100%;
+	box-sizing: border-box;
+	padding-left:20%;
+}
+.weui-form-text{
+	width: 65%;
+	margin-right: 0%;
+}
+.er_list{
+	/* margin-top: 5px; */
+	overflow: hidden;
+	border-top: 1px solid #ccc;
+}
+#jybb{
+	padding: 0;
+}
+.box_jybb{
+	padding: 8px 20px;
+}
+.weui-form-preview__ft{
+	line-height: 40px;
+}
+.jw_sb{
+	color: #fff;
+}
+.jw_xb{
+	color: #fff;
+}
+.jw_sb:active{
+	color: #fff;background-color: rgb(13, 146, 207);
+}
+.jw_xb:active{
+	color: #fff;background-color: rgb(151, 151, 151);
+
+}
+.weui-dialog__btn.primary{
+	color: rgb(13, 146, 207);
+}
+
+.blue{
+	background-color: rgb(21, 164, 231);
+}
+.blue:active{
+	color: #fff;background-color: rgb(13, 146, 207);
+}
+.gray{
+	background-color: #ccc;
+}
+.gray:active{
+	color: #fff;background-color: rgb(151, 151, 151);
+
+}
+.weui-form-preview__ft{
+	margin-top: 2px;
+}
+.sm_xb{
+	width: 100% !important;
+	font-size: 12px;
+	color: #fff;
+	background-color: rgb(23, 187, 132);
+	text-align: center;
+
+	/* padding-bottom: 10px; */
+}
+.weui-form-li{
+	margin:10px 10px;
+	/* margin-bottom:10px; */
+}
+.sm_sb{
+	width: 100% !important;
+	font-size: 12px;
+	color: #fff;
+	background-color: rgb(228, 79, 79);
+	text-align: center;
+}
+.weui-form-preview__ft{
+	width: 100%
+}
+a:hover,a:active{
+	color: #666
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="node_modules/jquery-weui/dist/css/jquery-weui.css">
+	<link rel="stylesheet" href="node_modules/jquery-weui/dist/lib/weui.min.css">
+	<link rel="stylesheet" href="css/allrw.css">
+	<link rel="stylesheet" href="css/grlist_bd.css">
+	<link rel="stylesheet" href="css/biaodan.css">
+	<link rel="stylesheet" href="css/Detailspage.css">
+	<script src="node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+	<script src="node_modules/jquery-weui/dist/js/jquery-weui.min.js"></script>
+	<link rel="stylesheet" href="node_modules/layui-src/dist/css/layui.css">
+	<style>
+		#type_show {
+			border: 1px solid #eee;
+			padding: 5px;
+
+		}
+
+		.weui-dialog__bd .weui-cell {
+			padding: 10px 15px;
+		}
+		.container,body,html{
+			height: 100%;
+		}
+		#tab2,#tab1{
+			background-color: #fff;
+		}
+	</style>
+	<style>
+		ul.layui-timeline {
+			padding: 40px;
+			box-sizing: border-box;
+		}
+	
+		.layui-timeline-title span {
+			display: block;
+		}
+	
+		.layui-timeline-title span:nth-of-type(2) {
+			font-size: 14px;
+			color: #999;
+		}
+	
+		.layui-timeline-title {
+			margin-bottom: 5px;
+		}
+	
+		.layui-timeline-title .pj {
+			display: inline-block;
+			background-color: #007aff;
+			color: #fff;
+			padding: 5px 15px;
+			border-radius: 5px;
+			font-size: 14px;
+		}
+	
+		.layui-timeline-axis {
+			color: #007aff;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div class="container">
+		<div class="weui-tab">
+			<div class="weui-navbar">
+				<a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+					报警详情
+				</a>
+				<a class="weui-navbar__item" href="#tab2">
+					进度查看
+				</a>
+			</div>
+			<div class="weui-tab__bd">
+				<div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+						<div class="detail_boxs">
+							<div class="detail_box detail_list">
+								<div><span class="b_text">报警人：</span><span class="s_text">王小明</span></div>
+								<div><span class="b_text"> 事件单编号:</span><span class="s_text">108237189812312</span></div>
+							</div>
+							<div class="detail_box detail_list">
+								<div><span class="b_text"> 报警时间:</span><span class="s_text">2019-11-12 22：12</span></div>
+								<div><span class="b_text"> 联系电话:</span><span class="s_text"><a href="tel:108237189131">108237189131</a></span>
+								</div>
+							</div>
+							<div class="detail_box detail_area">
+								<div class="text_area b_text">地理定位 </div>
+								<div class="text_area s_text">地理定位地理定位地理定位地理定位地理定位地理定位地理定位地理定位地理定位地理定位地理定位地理定位地理定位</div>
+							</div>
+							<div class="detail_box detail_area">
+								<div class="text_area b_text">报警内容:</div>
+								<div class="text_area s_text">房屋被拆房屋被拆房屋被拆房屋被拆房屋被拆房屋被拆房屋被拆房屋被拆</div>
+							</div>
+							<!-- <div class="weui-form-preview__ft">
+								<a type="submit" href='jindu/jindu.html'
+									class="weui-form-preview__btn weui-form-preview__btn_primary blue_color">进度查看</a>
+							</div> -->
+						</div>
+				</div>
+				<div id="tab2" class="weui-tab__bd-item">
+					<ul class="layui-timeline">
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title"><span>已提交</span><span>2019-01-12</span> </h3>
+								<p>
+									楼下随意2停车，影响小区出行
+								</p>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title"><span>正在处理</span><span>2019-01-13</span> </h3>
+					
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title"><span>已交白龙居委会处理</span><span>2019-01-14</span></h3>
+								<p>
+					
+								</p>
+					
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title"><span>处理完成</span><span>2019-01-16</span></h3>
+								<p>
+									已处理完成，清理楼下车辆，并警告
+								</p>
+							</div>
+						</li>
+						<li class="layui-timeline-item">
+							<i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+							<div class="layui-timeline-content layui-text">
+								<h3 class="layui-timeline-title"><span class="pj">返回主页</span></h3>
+					
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		
+
+	</div>
+
+</body>
+<script>
+	  $(function () {
+			$('.pj').on('click', function () {
+				window.location.href = 'myd.html'
+			})
+		})
+</script>
+
+
+</html>

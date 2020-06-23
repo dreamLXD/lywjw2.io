@@ -1,0 +1,43 @@
+body {
+    background-color: #eee;
+}
+
+.xqbanner {
+    text-align: center !important;
+    padding: 20px 0;
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+}
+.weui-textarea{
+    box-sizing: border-box;
+}
+.weui-cells_form {
+    padding: 0 20px;
+}
+
+.weui-textarea {
+    border: 1px solid #ccc !important;
+    padding: 5px;
+}
+
+.bd_top::before {
+    border-top: none;
+}
+
+.weui-label {
+    width: 130px;
+}
+
+.title {
+    text-align: left;
+    font-size: 18px;
+    padding: 5px 0;
+    margin-top: 10px;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+
+.wd label {
+    width: 200px;
+}

@@ -1,0 +1,4 @@
+jmhkbny  =>居民户口簿内页
+jmhkbsy  =>居民户口簿首页
+ jmhkb    =>居民户口簿
+jmhkbsyb =>居民户口簿索引表

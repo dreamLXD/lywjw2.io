@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.blue {
+    background-color: rgb(0, 132, 255) !important;
+}
+
+.huise {
+    background-color: rgba(177, 177, 177, 0.76) !important;
+}
+
+.weui-swiped-btn.weui-swiped-btn_warn.delete-swipeout {
+    line-height: 3rem;
+}
+
+.weui-cell__ft {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.weui-cell__bd {
+    min-width: 80px;
+}
+
+.weui-swiped-btn {
+    padding: 12px 1.5rem !important;
+}
+
+/* xqallrw */
+.gray {
+    color: #999
+}
+
+.black {
+    color: #000 !important
+}
+
+.block {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start !important;
+    align-content: flex-start
+}
+
+.block .weui-cell__ft {
+    flex-wrap: wrap;
+    width: 100%;
+    white-space: normal;
+    text-align: left
+}
+
+.weui-cell__bd {
+    font-size: 16px;
+}
+
+.weui-cell__ft {
+    font-size: 15px;
+}
+
+.blue_color {
+    color: rgb(0, 132, 255) !important;
+}
+
+.weui-form-preview__ft::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #d5d5d6;
+    color: #d5d5d6;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+
+.xqbanner {
+    height: 3rem;
+    border-bottom: 1px solid #ccc;
+    line-height: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.weui-dialog .weui-input {
+    font-size: 14px;
+    color: #999;
+}
+
+.weui-dialog.weui-dialog--visible.my_my_preview {
+    visibility: hidden;
+}
+
+.weui-mask.weui-mask--visible.my_preview {
+    visibility: hidden;
+
+}
+
+.weui-dialog--visible.my_preview {
+    visibility: hidden;
+
+}
+
+.weui-picker-overlay,
+.weui-picker-container {
+    z-index: 9000;
+}
+
+.weui-dialog {
+    top: 40%
+}
+
+.weui-dialog__hd {
+    padding: 0.5em 0.6em;
+}
+
+strong {
+    font-size: 24px !important;
+}
+
+.weui-cells.weui-cells_form {
+    margin-top: 0;
+}
+
+.weui-cells__title {
+    font-size: 16px;
+    text-align: left;
+    color: #000;
+}
+
+.weui-cell_swiped {
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box
+}
+
+.weui-cell:before {
+    border: none;
+    border-top: none !important;
+}
+
+.weui-textarea {
+    border: 1px solid #ddd;
+    padding: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* video */
+video {
+    width: 100%;
+}
+
+/* 搜索 */
+.weui-search-bar__cancel-btn {
+    color: rgb(0, 132, 255) !important;
+}
+
+.weui-dialog__btn {
+    color: rgb(0, 132, 255) !important;
+
+}

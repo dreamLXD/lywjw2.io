@@ -1,0 +1,17 @@
+img {
+    width: 100%
+}
+
+section {
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.list {
+    border: none;
+    border-radius: 5px;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    box-shadow: 2px 2px 3px #ccc;
+    margin-bottom: 10px;
+}

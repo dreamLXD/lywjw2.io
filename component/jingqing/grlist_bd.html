@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="../../node_modules/jquery-weui/dist/lib/weui.min.css">
+     <link rel="stylesheet" href="css/allrw.css">
+    <link rel="stylesheet" href="css/grlist_bd.css">
+    <link rel="stylesheet" href="./../../css/biaodan.css">
+    <script src="../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../../node_modules/jquery-weui/dist/js/jquery-weui.min.js"></script>
+    <style>
+        #type_show{
+            border: 1px solid #eee;
+            padding: 5px ;
+
+        }
+        .weui-dialog__bd .weui-cell{
+            padding: 10px 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+<iframe  style="display: none" id="geoPage" width="100%" height="0%" frameborder=0 scrolling="no"
+         src="https://apis.map.qq.com/tools/geolocation?key=7PCBZ-SJ6WQ-J2I5Y-GZIOV-5GZ5F-X7BZL&referer=linyiditu&effect=zoom"></iframe>
+<iframe style="display: none"   id="markPage" width="100%" height="0%" frameborder=0 scrolling="no" src=""></iframe>
+
+<div class="weui-cells">
+        <div class="xqbanner"> <span></span> 接警详情 <span></span></div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>报警人：</p>
+                    </div>
+                    <div class="weui-cell__ft ">王小明</div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>报警时间:</p>
+                    </div>
+                    <div class="weui-cell__ft">2019-11-12 22：12</div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>联系电话:</p>
+                    </div>
+                    <div class="weui-cell__ft">108237189812</div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>事件单编号:</p>
+                    </div>
+                    <div class="weui-cell__ft">108237189812</div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <p>报警电话:</p>
+                    </div>
+                    <div class="weui-cell__ft">108237189812</div>
+                </div>
+                <div class="weui-cell block">
+                    <div class="weui-cell__hd block">
+                        <span>接警地址：</span>
+                        <span class="dldw"></span>
+                    </div>
+                    <div class="weui-cell__ft">东高庄奥术大师大所多撒多撒大所多撒多撒多撒啊</div>
+                </div>
+                <div class="weui-cell block">
+                    <div class="weui-cell__bd">
+                        <p>报警内容:</p>
+                    </div>
+                    <div class="weui-cell__ft">房屋被拆房屋被拆房屋被拆房屋被拆房屋被拆房屋被拆房屋被拆房屋被拆</div>
+                </div>
+
+				     <div class="weui-form-preview__ft">
+				          <button class="weui-form-preview__btn weui-form-preview__btn_default show" >驳回</button>
+				          <button type="submit"
+				              class="weui-form-preview__btn weui-form-preview__btn_primary blue_color">接受</button>
+				      </div>
+
+                <!--驳回-->
+                <div class="weui-mask weui-mask--visible my_preview"></div>
+                <div class="weui-dialog weui-dialog--visible my_preview">
+                    <div class="weui-dialog__hd"><strong class="weui-dialog__title">驳回</strong></div>
+                    <div class="weui-dialog__bd">
+                        <p class="weui-prompt-text"></p>
+                        <div class="weui-cells weui-cells_form">
+                            <div class="weui-cells__title">驳回类型</div>
+                            <div class="weui-cells">
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <input class="weui-input" id="type_show" type="text" placeholder="请选择">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weui-cells__title">驳回原因</div>
+                            <div class="weui-cells weui-cells_form">
+                                <div class="weui-cell">
+                                    <div class="weui-cell__bd">
+                                        <textarea class="weui-textarea" placeholder="请输入原因" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weui-dialog__ft"><a href="javascript:;" class="weui-dialog__btn default  del_close">取消</a>
+                        <a href="javascript:;" class="weui-dialog__btn primary submit blue_color">提交</a></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/dw.js"></script>
+<script>
+    $('.dldw').on('click',()=>{
+        window.location.href='navCar.html'
+    })
+        $('.weui-cell_swiped').swipeout()
+        $('.blue_color').on('click', (e) => {
+            e.preventDefault();
+            console.log('a')
+            $.confirm({
+                title: '是否在报警位置',
+                text: '',
+                onOK: function () {
+                    console.log(dwstr)
+                    window.location.href = './grlist_bd_2.html'
+                },
+                onCancel: function () {}
+            });
+        })
+    //驳回弹窗显示
+    $('.show').on('click', function (e) {
+        // e.preventDefault()
+        $('.weui-mask.weui-mask--visible').css('visibility', 'visible')
+        $('.weui-dialog.weui-dialog--visible').css('visibility', 'visible')
+        $("#type_show").select({
+            title: "类型",
+            items: [{
+                title: "刑事",
+                value: 1
+            },
+                {
+                    title: "治安",
+                    value: 2
+                },
+                {
+                    title: "交通",
+                    value: 3
+                },
+                {
+                    title: "火灾",
+                    value: 4
+                },
+                {
+                    title: "求助",
+                    value: 5
+                },
+                {
+                    title: "投诉",
+                    value: 6
+                },
+                {
+                    title: "纠纷",
+                    value: 7
+                }
+            ]
+        });
+
+    })
+    $('.del_close').on('click', function (e) {
+        e.preventDefault()
+        $('.weui-mask.weui-mask--visible').css('visibility', 'hidden')
+        $('.weui-dialog.weui-dialog--visible').css('visibility', 'hidden')
+    })
+    $('.submit').on('click', function (e) {
+        e.preventDefault()
+        $('.weui-mask.weui-mask--visible').css('visibility', 'hidden')
+        $('.weui-dialog.weui-dialog--visible').css('visibility', 'hidden')
+        window.location.href = '../../jingqing.html'
+    })
+
+
+</script>
+
+
+</html>

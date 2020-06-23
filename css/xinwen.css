@@ -1,0 +1,234 @@
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    header {
+        width: 100%;
+    }
+
+    .fixclear::before,
+    .fixclear::after {
+        content: '';
+        display: block;
+        visibility: hidden;
+        overflow: hidden;
+        clear: both;
+        height: 0;
+        line-height: 0;
+    }
+
+    .list {
+        background-color: #fff;
+    }
+
+    .list h3 {
+        padding: 5px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .list .list_box {
+        padding: 5px 10px;
+    }
+
+    .list .list_box a {
+        padding: 5px;
+        color: #999;
+        text-decoration: none;
+        width: 33.33%;
+        float: left;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .list .list_box a img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+    }
+
+    .list .list_box a p {
+        font-size: 12px;
+        padding: 0 3px;
+        text-align: center
+    }
+
+    .blue {
+        color: #0054aa;
+        border-bottom: 1px solid #0054aa
+    }
+
+    .yellow {
+        color: #ff8652;
+        border-bottom: 1px solid #ff8652
+    }
+
+    .pink {
+        color: #be6df2;
+        border-bottom: 1px solid #be6df2
+    }
+
+    .red {
+        color: #f2538f;
+        border-bottom: 1px solid #f2538f
+    }
+
+    section {
+        margin-bottom: 80px;
+    }
+
+    section .list .content,
+    section .list .content_list {
+        background-color: #fff;
+        padding: 15px 25px;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+    }
+
+    section .list .content_list {
+        background-color: rgb(248, 247, 247);
+        padding:8px  25px;
+    }
+  
+    a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .content img {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        width: 8%;
+        float: left;
+    }
+
+    .content div {
+        padding-left: 11%;
+        width: 80%;
+        height: 100%;
+        float: left;
+        position: relative;
+    }
+
+    .content_list div {
+        padding-left: 10px;
+        width: 90%;
+        float: left;
+        position: relative;
+    }
+
+    .content_list img {
+        width: 10%;
+        float: left;
+    }
+
+    .content div::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%) rotateX(0deg);
+        background: url(../img/gen.png) no-repeat center;
+        background-size: 100%;
+    }
+
+    .content .move::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%) rotateX(0deg);
+        background: url(../img/gen1.png) no-repeat center;
+        background-size: 100%;
+    }
+
+    .content_list {
+        display: none
+    }
+
+    .content div p {
+        font-size: 14px;
+    }
+
+    .content div p span {
+        font-size: 12px;
+        color: #888
+    }
+
+    .content_list div p {
+        font-size: 14px;
+    }
+
+    .content_list div p span {
+        font-size: 12px;
+        color: #888
+    }
+
+    .list,
+    .list a,
+    .yiwang {
+        box-sizing: border-box
+    }
+
+    .textbtn {
+        color: #0054aa
+    }
+
+    .two .yiwang p {
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    .two .yiwang {
+        position: relative;
+    }
+
+    .two .yiwang div {
+        position: relative;
+        right: 0;
+        top: 50%;
+        height: 100%;
+    }
+    a div p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    section .list .content_list > div{
+        position: relative;
+    }
+    section .list .content_list > div::after{
+        content: '';
+        background:  url(../img/gen1.png) no-repeat center;
+        width: 20px;
+        height: 20px;
+        background-size: cover;
+        visibility:visible;
+        position: absolute;
+        right: -10px;
+        z-index: 100;
+        top: 50%;
+        transform: translateY(-50%) rotateZ(-90deg);
+        
+      }

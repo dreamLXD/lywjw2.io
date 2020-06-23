@@ -1,0 +1,108 @@
+body {
+    background-color: #fff;
+    font-size: 14px
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.fixclear::before,
+.fixclear::after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    line-height: 0;
+}
+
+nav {
+    background-color: #fff;
+    white-space: nowrap;
+    overflow: scroll;
+    border-bottom: 1px solid #ccc;
+}
+
+nav::-webkit-scrollbar {
+    /*隐藏滚轮*/
+    display: none;
+}
+
+nav span {
+    display: inline-block;
+    font-size: 16px;
+    width: 20%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.list {
+    position: relative;
+    background-color: #fff;
+    padding: 5px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.list span {
+    font-size: 12px;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 10px;
+    float: right;
+}
+
+
+.green {
+    background-color: #6ed387;
+
+}
+
+.blue {
+    background-color: rgb(81, 163, 235);
+
+}
+
+.yellow {
+    background-color: #eba948;
+
+}
+
+.list p {
+    float: left;
+}
+
+a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+
+.list p {
+    display: inline-block;
+    font-size: 12px;
+    box-sizing: border-box;
+    width: 70%;
+    padding: 5px 0;
+}
+
+#tab2,
+#tab3,
+#tab4,
+#tab5,
+#tab6 {
+    display: none;
+}
+
+section nav .bbtm {
+    color: #385cdd;
+    border-bottom: 2px solid #385cdd;
+}
+
+
+a div {
+    height: 30px;
+    width: 90%;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/lib/weui.min.css">
+    <link rel="stylesheet" href="../../../css/weui_biaodan.css">
+    <link rel="stylesheet" href="../../../css/biaodan.css">
+    <link rel="stylesheet" href="../../../css/file.css">
+    <script src="../../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../../../node_modules/jquery-weui/dist/js/jquery-weui.js"></script>
+    <script src="../../../js/file2.js"></script>
+    <script src="../../../js/shenfen.js"></script>
+</head>
+
+<body>
+    <form action="#" method="GET">
+        <section>
+            <h1>申请人基本信息</h1>
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">姓：</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" name="name" placeholder="请输入姓">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">名：</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" placeholder="请输入名">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">拼音姓：</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" placeholder="请输入拼音姓">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">性别：</label></div>
+                    <div class="weui-cell__bd">
+                        <input id="sex" class="weui-input" placeholder="请选择性别">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">民族：</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" placeholder="请输入民族">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">身份证号码：</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" placeholder="请输入身份证号码">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">出生日期：</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" id="date1" data-toggle='date' placeholder="请选择出生日期">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">出生地点：</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" id="site" placeholder="请选择出生地点">
+                    </div>
+                </div>
+
+
+                <!-- 文件上传 -->
+                <div class="container">
+                    <div class="weui_cells weui_cells_form">
+                        <div class="weui_cell">
+                            <div class="weui_cell_bd weui_cell_primary">
+                                <div class="weui_uploader">
+                                    <div class="weui_uploader_hd weui_cell">
+                                        <div class="weui_cell_bd weui_cell_primary">图片上传</div>
+                                        <i class="weui-icon-warn weui-icon_msg-primary imgwarn"></i>
+                                        <!-- <div class="weui_cell_ft js_counter">0/6</div> -->
+                                    </div>
+                                    <div class="weui_uploader_bd">
+
+                                        <div class="weui_uploader_input_wrp ">
+                                            <input class="weui_uploader_input js_file " type="file" name="img"
+                                                accept="image/jpg,image/jpeg,image/png,image/gif" multiple="">
+                                            <p>身份证正面</p>
+                                        </div>
+                                        <div class="weui_uploader_input_wrp">
+                                            <input class="weui_uploader_input js_file one" type="file" name="img"
+                                                accept="image/jpg,image/jpeg,image/png,image/gif" multiple="">
+                                            <p>身份证反面</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui_dialog_alert" style="display: none;">
+                    <div class="weui_mask"></div>
+                    <div class="weui_dialog">
+                        <div class="weui_dialog_hd">
+                            <strong class="weui_dialog_title">警告</strong>
+                        </div>
+                        <div class="weui_dialog_bd">弹窗内容，告知当前页面信息等</div>
+                        <div class="weui_dialog_ft">
+                            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imgshow">
+                    <div>
+                        <p class="title"> 实例图片 </p>
+                        <p class="zhushi">实例图片实例图片实例图片实例图片实例图片实例图片实例图窗内容，告知当前页面片实例图片实例图片</p>
+                        <button>确定</button>
+                    </div>
+                </div>
+                <!-- 文件上传 -->
+            </div>
+        </section>
+        <section class="botton_box">
+            <h1>申请人基本信息</h1>
+            <div class="box_footer">
+                <p>取证方式</p>
+                <div>
+                    <span class="blue">邮政速递</span>
+                    <span class="moren">申请地公安机关领取</span>
+                </div>
+                <div class="textred">郑重承诺</div>
+                <p class="textred">本人保证提供申报信息和证明材料的真实，合法，有效，并承担由此引发的一切相关法律责任</p>
+            </div>
+        </section>
+        <footer>
+            <button>提交</button>
+        </footer>
+    </form>
+</body>
+
+</html>

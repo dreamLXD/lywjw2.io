@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>满分教育道路执勤预约</title>
+		<link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+		<link rel="stylesheet" href="../../../node_modules/jquery-weui/dist/lib/weui.min.css">
+		<link rel="stylesheet" href="../../../css/weui_biaodan.css">
+		<link rel="stylesheet" href="../../../css/biaodan.css">
+		<script src="../../../js/jiazai.js"></script>
+		<script src="../../../js/basepath.js"></script>
+		<script src="../../../component/biaodan/huzheng/js/alert.js"></script>
+		<script src="../../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+		<script src="../../../node_modules/jquery-weui/dist/js/jquery-weui.js"></script>
+		<script src="../../../node_modules/jquery-weui/dist/js/city-picker.js"></script>
+		<script src="../../../js/jquery.validate.min.js"></script>
+		<script src="../../../js/regular.js"></script>
+		<script src="../../../js/jiazai.js"></script>
+		<script src="../../../component/jiaoguan/jiaoguan/js/Handover.js"></script>
+
+	</head>
+
+	<body>
+
+		<!--<div class="imgshow" style="display: block; z-index: 1000;">
+			<div>
+				<p class="title"> 类型选择 </p>
+				<p class="zhushi" style="color: red;text-align: center">
+					请在类型中选择符合自己的所办事项
+				</p>
+				<button class="submit">确定</button>
+			</div>
+		</div>-->
+		<form action="javascript:;" method="post" id='signupForm' novalidate="novalidate">
+			<section>
+
+				<h1>申报人信息</h1>
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">姓名：</label></div>
+						<div class="weui-cell__bd">
+							张三
+						</div>
+					</div>
+				</div>
+
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">身份证号：</label></div>
+						<div class="weui-cell__bd">
+							370680000000000000
+						</div>
+					</div>
+				</div>
+
+				<h1>满分教育道路执勤预约</h1>
+
+				<div class="weui-cells weui-cells_form">
+
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">姓名:</label></div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" required name="swrysfz" placeholder="请输入姓名">
+						</div>
+					</div>
+				</div>
+
+				<div class="weui-cells weui-cells_form">
+
+					<div class="weui-cell">
+						<div class="weui-cell__hd"><label class="weui-label">联系方式:</label></div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" required name="swrysfz" placeholder="请输入手机号码">
+						</div>
+					</div>
+				</div>
+
+				<input type="hidden" id="openid" name="openid" value="${jbxx.openid}">
+				<input type="hidden" id="uuid" name="uuid" value="${jbxx.uuid}">
+
+				</div>
+			</section>
+			<footer>
+				<button>提交预约</button>
+			</footer>
+		</form>
+	</body>
+	<script src="../../../component/jiaoguan/jiaoguan/js/Below.js">
+	</script>
+	<script src="../../../component/jiaoguan/jiaoguan/js/CarType.js"></script>
+	<script src="../../../component/jiaoguan/jiaoguan/js/DriveType.js"></script>
+	<script src="../../../component/jiaoguan/jiaoguan/js/CarAttributes.js"></script>
+	<script src="../../../component/jiaoguan/jiaoguan/js/FuelType.js"></script>
+
+</html>

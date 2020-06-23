@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/jquery-weui/dist/lib/weui.css">
+    <link rel="stylesheet" href="./node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="Title">
+            <div>用户登录</div>
+            <p>—— 欢迎进入微警务 ——</p>
+        </div>
+        <div class="weui-cells weui-cells_form">
+            <form action="#">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">用户名:</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" required placeholder="请输入用户名">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">密&nbsp;&nbsp;&nbsp;码:</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" required placeholder="请输入密码">
+                    </div>
+                </div>
+
+                <input type="submit" value="登录" class="weui-btn weui-btn_primary"
+                    style="height:2rem;line-height:1rem;margin-top:25px">
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+
+<script src="node_modules/jquery-weui/dist/js/jquery-weui.min.js"></script>
+<script>
+    $('input[type="submit"]').on('click', function () {
+        if ($('input').eq(0).val() == '' || $('input').eq(1).val() == '') {
+            $.toptip('操作失败', 'error');
+        } else {
+            $.toptip('操作成功', 'success');
+            window.history.back(-1)
+        }
+    })
+</script>
+
+</html>

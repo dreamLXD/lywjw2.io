@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/allrw.css">
+    <link rel="stylesheet" href="../../node_modules/jquery-weui/dist/css/jquery-weui.css">
+    <link rel="stylesheet" href="../../node_modules/jquery-weui/dist/lib/weui.min.css">
+    <script src="../../node_modules/jquery-weui/dist/lib/jquery-2.1.4.js"></script>
+    <script src="../../node_modules/jquery-weui/dist/js/jquery-weui.min.js"></script>
+    <style>
+        .weui-cells{
+            margin-top: 0;
+        }
+        a{
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="weui-search-bar" id="searchBar">
+        <form class="weui-search-bar__form">
+            <div class="weui-search-bar__box">
+                <i class="weui-icon-search"></i>
+                <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+            </div>
+            <label class="weui-search-bar__label" id="searchText">
+                <i class="weui-icon-search"></i>
+                <span>搜索</span>
+            </label>
+        </form>
+        <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">确定</a>
+    </div>
+    <div class="container">
+        <div class="weui-cells">
+            <a href="shenpi_xq.html" class="weui-cell weui-cell_swiped">
+                <div class="weui-cell__bd">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd Bj_name">
+                            <p>王小明</p>
+                        </div>
+                        <div class="weui-cell__ft black">2018-22-21 12:123</div>
+                    </div>
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <p class="gray">地址:</p>
+                        </div>
+                        <div class="weui-cell__ft">市中区：面积 280平方千米，人口54万。邮政编码250002。</div>
+                    </div>
+                </div>
+                <div class="weui-cell__ft">
+                    <!--<a class="weui-swiped-btn weui-swiped-btn_warn delete-swipeout blue" href="shenpi_xq.html">详情</a>-->
+
+                </div>
+            </a>
+
+
+        </div>
+        <div class="weui-cells">
+            <a href="shenpi_xq.html" class="weui-cell weui-cell_swiped">
+                <div class="weui-cell__bd">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd Bj_name">
+                            <p>王小华</p>
+                        </div>
+                        <div class="weui-cell__ft black">2018-22-21 12:123</div>
+                    </div>
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <p class="gray">地址:</p>
+                        </div>
+                        <div class="weui-cell__ft">市中区：面积 280平方千米，人口54万。邮政编码250002。</div>
+                    </div>
+                </div>
+                <div class="weui-cell__ft">
+                    <!--<a class="weui-swiped-btn weui-swiped-btn_warn delete-swipeout blue" href="shenpi_xq.html">详情</a>-->
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+    // $('.weui-cell_swiped').swipeout();
+</script>
+
+</html>

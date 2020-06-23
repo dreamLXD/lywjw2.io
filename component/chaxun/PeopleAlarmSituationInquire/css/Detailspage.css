@@ -1,0 +1,86 @@
+.detail_boxs{
+    background-color: #fff;
+}
+.detail_boxs >div{
+    padding: 5px 20px;
+}
+.detail_head{
+    background-color: #3794ff;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    padding: 8px 0;
+}
+.detail_box{
+    font-size: 16px;
+    border-bottom:1px solid #eee ;
+
+}
+.detail_list{
+    display: flex;
+    font-size: 14px;
+}
+.detail_list div{
+    width: 50%;
+    padding: 10px 0;
+    padding-left:20px ;
+    box-sizing: border-box;
+}
+
+.detail_list div:nth-of-type(1){
+    border-right: 1px solid #eee;
+}
+.detail_list span{
+    display: block;
+    width: 100%;
+}
+.s_text{
+    color: #888;
+    font-size: 14px;
+}
+.b_text{
+    color: #000;
+    font-size: 16px;
+}
+#tab2 .container{
+    margin-top: 20px;
+    padding: 10px 0;
+}
+#tab2 .weui-tab{
+    background-color: #fff;
+}
+.text_area.s_text{
+    padding-bottom: 10px
+}
+.dldw{
+    display: block;
+    width:25px;
+    height: 25px;
+    background:url('../../../img/dldw.png') no-repeat center;
+    background-size: 100% 100%;
+    float: right;
+}
+.container{
+    height: 100%;
+    position: relative;
+}
+.container .weui-form-preview__ft{
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 0;
+}
+.detail_boxs{
+    height: calc(100% - 45px);
+}
+.detail_boxs  .weui-form-preview__ft{
+    padding: 0;
+}
+.weui-form-preview__ft .show{
+    background-color: #fdb821;
+    color: #fff;
+}
+.weui-form-preview__ft .blue_color{
+    background-color: #fd6738 !important;
+    color: #fff !important;
+}
